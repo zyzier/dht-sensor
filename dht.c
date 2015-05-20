@@ -18,7 +18,7 @@
 #define MAXTIMINGS 100
 #define PG04 SUNXI_GPG(4) //####### DATA-Pin select
 
-int dhtpin = PG04;//####### DATA-Pin select
+int dhtpin = PG04;
 
 //#define DEBUG
 #define DHT11 11

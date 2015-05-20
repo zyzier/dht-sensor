@@ -4,6 +4,8 @@ DHT-sensor driver for Cubietruck
 Development resources: demo codes, schematic, datasheets, etc., can be found here:
 http://www.wvshare.com/product/Temperature-Humidity-Sensor.htm
 
+Before compile you need to specify the "DATA"-pin of sensor in dht.c near comment with label "DATA-Pin select"
+
 ##Compile
 1. gcc dht.c -c
 2. gcc gpio_lib.c -c
