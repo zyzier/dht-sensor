@@ -1,6 +1,9 @@
 # dht-sensor
 DHT-sensor driver for Cubietruck
 
+Development resources: demo codes, schematic, datasheets, etc., can be found here:
+http://www.wvshare.com/product/Temperature-Humidity-Sensor.htm
+
 ##Compile
 1. gcc dht.c -c
 2. gcc gpio_lib.c -c
