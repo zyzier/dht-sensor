@@ -1,14 +1,6 @@
-//  How to access GPIO registers from C-code on the Raspberry-Pi
-//  Example program
-//  15-January-2012
-//  Dom and Gert
-//
 // Access from ARM Running Linux
 //##define BCM2708_PERI_BASE        0x20000000
 //#define GPIO_BASE                (BCM2708_PERI_BASE + 0x200000) /* GPIO controller */
-//###########################################################################################
-//########################### Geändert zur verwendung auf dem Cubietruck
-//##########################################################################################
 
 #include <stdio.h>
 #include <string.h>
@@ -24,9 +16,9 @@
 #include <unistd.h>
 #include "gpio_lib.h"
 #define MAXTIMINGS 100
-#define PG04 SUNXI_GPG(4) 
+#define PG04 SUNXI_GPG(4) //####### DATA-Pin select
 
-int dhtpin = PG04;//##################### Den verwendeten PIN hier einstellen
+int dhtpin = PG04;//####### DATA-Pin select
 
 //#define DEBUG
 #define DHT11 11
@@ -38,7 +30,7 @@ int readDHT(int type, int pin);
 int main(int argc, char **argv)
 {
   if(SETUP_OK!=sunxi_gpio_init()){
-    printf("Fehler bei initialisierung!\n");
+    printf("Error init gpio\n");
     return -1;
   }
 

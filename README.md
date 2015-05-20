@@ -1,2 +1,14 @@
 # dht-sensor
 DHT-sensor driver for Cubietruck
+
+##Compile
+1. gcc dht.c -c
+2. gcc gpio_lib.c -c
+3. gcc dht.o gpio_lib.o -o dht
+
+##Usage
+# ./dht 11
+
+##Output example
+Data (40): 0x20 0x0 0x17 0x0 0x37
+Temp = 23 *C, Hum = 32 %
